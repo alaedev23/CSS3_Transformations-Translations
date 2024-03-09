@@ -1,0 +1,76 @@
+body {
+    overflow: hidden;
+}
+
+#images {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 250px auto;
+    width: 60%;
+}
+
+img {
+    width: 33%;
+    /* transform: scale(1.10); */
+    transition: transform 1s ease-in-out;
+}
+
+img:hover {
+    z-index: 10;
+}
+
+#images img:nth-child(odd) {
+    rotate: -20deg;
+}
+
+#images img:nth-child(even) {
+    rotate: 20deg;
+}
+
+#images img:first-child:hover {
+    transform: scale(2.25) translate(10%, 20%) rotate(20deg);
+}
+
+#d2:hover {
+    transform: scale(2.25) translateY(20%) rotate(340deg);
+}
+
+#d3:hover {
+    transform: scale(2.25) translateY(20%) rotate(380deg);
+}
+
+#d4:hover, #d6:hover {
+    transform: scale(2.25) translate(-10%, -20%) rotate(340deg);
+}
+
+#d5:hover {
+    transform: scale(2.25) translateY(-15%) rotate(380deg);
+}
+
+.btn {
+    display: flex;
+    background-color: cadetblue;
+    color: aliceblue;
+    width: 150px;
+}
+
+.btn * {
+    padding: 5px 5px;
+}
+
+.btnText {
+    z-index: 10;
+}
+
+.btn .btnFoldout {
+    width: 0;
+}
+
+.btn .btnFoldout:hover {
+    width: 50px;
+}
+
+.btn svg {
+    z-index: 10;
+    width: 25px;
+}
